@@ -12,7 +12,7 @@ services:
     - ./mysql:/var/lib/mysql
 
   bookstack:
-    image: budrom/rpi-bookstack:latest
+    image: jeroenvd/rpi-bookstack:latest
     depends_on:
     - mysql
     environment:
