@@ -1,5 +1,5 @@
 FROM budrom/rpi-php:7.0-fpm
-
+COPY qemu-arm-static /usr/bin
 ENV BOOKSTACK=BookStack \
     BOOKSTACK_VERSION=0.25.5 \
     BOOKSTACK_HOME="/var/www/bookstack"
