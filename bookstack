@@ -4,7 +4,7 @@ server {
 
   server_name bookstack;
 
-  root /var/www/bookstack/public;
+  root /var/www/BookStack/public;
   index index.php index.html;
 
   location / {
