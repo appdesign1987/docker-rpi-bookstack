@@ -11,7 +11,7 @@ if [ ! -f '/var/www/BookStack/.env' ]; then
       # Environment
       APP_ENV=development
       APP_DEBUG=${APP_DEBUG:-true}
-      APP_KEY=${APP_KEY:-SomeRandomString}
+      APP_KEY=${APP_KEY:-YmNWDGvtFtQPAPHpaLVGqhwrGCwoNfJVqvckCIDg}
 
       # The below url has to be set if using social auth options
       # or if you are not using BookStack at the root path of your domain.
