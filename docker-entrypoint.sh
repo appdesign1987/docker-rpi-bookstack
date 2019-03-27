@@ -10,7 +10,7 @@ if [ ! -f '/var/www/BookStack/.env' ]; then
   cat > /var/www/BookStack/.env <<EOF
       # Environment
       APP_ENV=production
-      APP_DEBUG=${APP_DEBUG:-false}
+      APP_DEBUG=${APP_DEBUG:-true}
       APP_KEY=${APP_KEY:-SomeRandomString}
 
       # The below url has to be set if using social auth options
@@ -101,7 +101,7 @@ else
   echoerr wait-for-db: timeout out after 15 seconds waiting for ${DB_HOST}:${DB_PORT}
 fi
 
-cd /var/www/BookStack/ && php artisan key:generate
+cd /var/www/BookStack/ && php artisan key:generate && php artisan migrate --force
 
 chown -R www-data:www-data /var/www/BookStack/public/uploads && chmod -R 775 /var/www/BookStack/public/uploads
 
