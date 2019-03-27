@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y unzip git zlib1g-dev libfreetype6-dev l
    && mkdir -p $BOOKSTACK_HOME \
    && cd $BOOKSTACK_HOME && wget https://github.com/ssddanbrown/BookStack/archive/v${BOOKSTACK_VERSION}.zip -O ${BOOKSTACK}.zip \
    && unzip ${BOOKSTACK}.zip && rm ${BOOKSTACK}.zip  \
-   && cd $BOOKSTACK_HOME/BookStack-${BOOKSTACK_VERSION} && mv * ../ && mv -f .* ../ \
+   && shopt -s dotglob nullglob && mv $BOOKSTACK_HOME/BookStack-${BOOKSTACK_VERSION}/* $BOOKSTACK_HOME/ \
    && cd $BOOKSTACK_HOME && rm -rf BookStack-${BOOKSTACK_VERSION} \
    && cd $BOOKSTACK_HOME && composer install \
    && chown -R www-data:www-data $BOOKSTACK_HOME \
