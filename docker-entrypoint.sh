@@ -9,8 +9,8 @@ if [ ! -f '/var/www/BookStack/.env' ]; then
   if [[ "${DB_HOST}" ]]; then
   cat > /var/www/BookStack/.env <<EOF
       # Environment
-      APP_ENV=development
-      APP_DEBUG=${APP_DEBUG:-true}
+      APP_ENV=production
+      APP_DEBUG=${APP_DEBUG:-false}
       APP_KEY=${APP_KEY:-WAQnZBIZCqGjZQKhNkFWqaTCIWIgMfSG}
 
       # The below url has to be set if using social auth options
