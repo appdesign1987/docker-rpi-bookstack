@@ -103,7 +103,7 @@ fi
 
 cd /var/www/BookStack/ && php artisan config:clear && php artisan config:cache && php artisan key:generate && php artisan migrate --force
 
-chown -R www-data:www-data /var/www/BookStack/public/uploads && chmod -R 775 /var/www/BookStack/public/uploads && chmod -R 775 /var/www/BookStack/logs/
+chown -R www-data:www-data /var/www/BookStack/public/uploads && chmod -R 775 /var/www/BookStack/public/uploads && chmod -R 775 /var/www/BookStack/storage/
 
 php-fpm --daemonize
 
