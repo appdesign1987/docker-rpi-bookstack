@@ -9,7 +9,7 @@ if [ ! -f '/var/www/BookStack/.env' ]; then
   if [[ "${DB_HOST}" ]]; then
   cat > /var/www/BookStack/.env <<EOF
       # Environment
-      APP_ENV=production
+      APP_ENV=development
       APP_DEBUG=${APP_DEBUG:-true}
       APP_KEY=${APP_KEY:-SomeRandomString}
 
